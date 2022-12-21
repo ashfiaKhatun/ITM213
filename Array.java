@@ -1,44 +1,32 @@
-package Array;
+package main;
 
 import java.util.Scanner;
 
 public class Array {
     
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         
-        Scanner input= new Scanner (System.in);
+        int[] age= new int[3];
+        String[] name= new String[3];
         
-        System.out.println("Input the size of array: ");
-        int n= input.nextInt();
-        
-        int sum=0;
-        int[] arr= new int[n];
-        
-        System.out.println("Insert the numbers: ");
-        
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < age.length; i++) {
             
-            arr[i]= input.nextInt();
+            name[i]= input.next();
+            
+            age[i]= input.nextInt();
             
         }
+      
         
-        System.out.println();
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < age.length; i++) {
             
-            sum += arr[i];
-                        
+            System.out.println(name[i]+" "+age[i]);
+            
+            }
+            
         }
-                 
-        System.out.println("Total= "+sum);
-        
-        double avg= sum/arr.length;
-        
-        System.out.println("Average= "+avg);
-
-        
-        
-        System.out.println("The size of the array is: "+arr.length);
-        
-    }
-    
 }
+
+    
+
