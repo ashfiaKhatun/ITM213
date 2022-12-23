@@ -1,78 +1,43 @@
-package basicTutorial;
+package main;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main{
+  public static void main(String[] args){
     
-    public static void main(String[] args){
-        
-        Scanner input= new Scanner(System.in);
-       
-        int X, Y;
-        
-        float total;
-        
-        X= input.nextInt();
-        Y= input.nextInt();
-        
-        switch (X){
-            
-            case 1 :
-                
-                total= 4.00f*Y;
-                System.out.printf("Total: R$ %.2f\n", total);
-                
-                break;
-                
-            case 2 :
-                
-                total= 4.50f*Y;
-                System.out.printf("Total: R$ %.2f\n", total);
-                
-                break;
-            
-            case 3 :
-                
-                total= 5.00f*Y;
-                System.out.printf("Total: R$ %.2f\n", total);
-                
-                break;
-            
-            case 4 :
-                
-                total= 2.00f*Y;
-                System.out.printf("Total: R$ %.2f\n", total);
-                
-                break;
-            
-            case 5 :
-                
-                total= 1.5f*Y;
-                System.out.printf("Total: R$ %.2f\n", total);
-                
-                break;
-        }               
-    }          
-}
+    Scanner input= new Scanner(System.in);
+    
+    int num, count=0;
+    
+    num= input.nextInt();
+    
+    if(num==0||num==1){
+        System.out.println("The number is not prime.");
+    }
+      
+      for (int i = 2; i <= num; i++) {
+          
+          for (int j = 2; j < i; j++) {
+              
+              if(i%j==0){
+                  count++;
+                  
+                  break;
+              }
+              
+          }
+          
+          if(count==0){
+              System.out.println(i);
+          }
+          
+          count=0;
+          
+      }
+      
+    
+      }
+  }
 
-/* 1040 avg 3
-Weighted Average= N*W/W
+    
 
-avg >= 7.0   approved
-
-ave < 5.0   reproved
-
-avg  >= 5.0 && avg <= 6.9    in exam
-
-
-
-exam score= N5
-
-new avg = (N5+ WA)/2
-
-new avg >= 5.0    approved
-
-new avg <= 4.9   reproved
-
-final avg = new
-*/
